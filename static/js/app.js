@@ -35,7 +35,6 @@ const handler = function(){
 }
 
 button.on("click", handler)
-// input.on("change", handler)
 input.on("change", function(){
     d3.select("#datetime").property(d3.event.gartet.value)
 })
