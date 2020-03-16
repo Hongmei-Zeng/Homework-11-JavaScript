@@ -6,14 +6,22 @@ const table = d3.select("#ufo-table").append("table")
 
 const thead = table.append("thead")
 
+// show all the data on home page
+tbody.html('') 
+data.forEach(row => {
+    const currentRow = tbody.append('tr')
+    Object.values(row).forEach(value => {
+        const cell = currentRow.append('td')
+        cell.text(value)
+    })
+})
+
+// show filtered data
 const handler = function(){
-
     tbody.html('')
-
     const inputDate = d3.select("#datetime").property("value")
 
     let filteredData = data.filter(e => e.datetime === inputDate)
-
         filteredData.forEach(e => {
         let row = tbody.append("tr")
         row.append("td").text(e.datetime)
@@ -25,5 +33,6 @@ const handler = function(){
         row.append("td").text(e.comments)
     })
 }
+
 button.on("click", handler)
 input.on("change", handler)
