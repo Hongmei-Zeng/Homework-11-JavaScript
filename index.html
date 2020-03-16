@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UFO Finder</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+
+  <body>
+    <div class="wrapper ml-auto">
+
+      <!-- UFO SIGHTINGS AND IMAGE PART -->
+      <header>
+        <nav class="navbar navbar-default" style="background-color: black;">
+          <div class="container-fluid" style="background-color: black;">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html"><strong>UFO Sightings</strong>
+                <img class="nav-ufo" src="static/images/ufo.svg">
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="container" style="margin-left: 0;">
+        <div class="row margin-top-50" >
+          
+          <!-- FILE SEARCH PART -->
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading" style="text-align: center;">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <center><label for="inputDate">Enter a Date</label></center>
+                        <input class="form-control" id="datetime" type="text" placeholder="M/D/YYYY" onchange="myFunction()" style="text-align: center;">
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+                <center>
+                  <button class="btn btn-default" type="button" id="filter-btn" style="margin-left: 10;">Filter It!</button>
+                </center>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+          <!-- TABLE DISPLAY PART -->
+          <div class="col-md-10">
+              <table id="ufo-table" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th class="table-head" style="font-size:16px;">Date</th>
+                    <th class="table-head" style="font-size:16px;">City</th>
+                    <th class="table-head" style="font-size:16px;">State</th>
+                    <th class="table-head" style="font-size:16px;">Country</th>
+                    <th class="table-head" style="font-size:16px;">Shape</th>
+                    <th class="table-head" style="font-size:16px;">Duration</th>
+                    <th class="table-head" style="font-size:16px;">Comments</th>
+                  </tr>
+                </thead>
+
+                <tbody>                  
+                </tbody>
+              </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app.js"></script>
+  </body>
+
+</html>
